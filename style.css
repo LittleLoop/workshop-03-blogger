@@ -1,0 +1,157 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@300;400&family=Yesteryear&display=swap');
+:root {
+		--bodyFont: 'Roboto Condensed', sans-serif;
+		--headingsFont: 'Yesteryear', cursive;
+		--cream: #e5d7cc;
+		--gray: #333;
+		--orange: #dc6805;  /* rgb(220, 104, 5) */
+		--yellow: #f2cd36;  /* rgb(242, 205, 54) */
+		--font: 16px;
+		--white: #fff;
+		--lightgray: #f7f7f7;
+		--transition: .3s ease;
+}
+* {
+		margin: 0;
+		padding: 0;
+		box-sizing: border-box;
+}
+body {
+		font-family: var(--bodyFont);
+		background: var(--cream);
+		color: var(--gray);
+		line-height: 1.6;
+		font-size: var(--font);
+		font-family: var(--bodyFont);
+}
+h1, h2, h3, h4 {
+		font-weight: 300;
+}
+
+button {
+	padding: 10px 30px;
+	color: var(--white);
+	background: var(--orange);
+	border: none;
+	border-radius: 5px;
+	margin: 5px 0 5px 0;
+	font-size: 1rem;
+}
+
+.container {
+	width: 80%;
+	margin: -200px auto 40px;
+	display: flex;
+}
+
+/* header */
+header {
+		background: linear-gradient(to right, rgba(242, 205, 54, 0.7),rgba(220, 104, 5, 0.7)), url(header.jpg);
+		background-position: center;
+		background-size: cover;
+		height: 70vh;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+}
+header h1 {
+		font-family: var(--headingsFont);
+		font-size: 7rem;
+		color: var(--gray);
+}
+
+header span {
+		color: var(--white);
+}
+
+/* main */
+main {
+	flex: 0 0 70%;
+}
+
+main article {
+	background: var(--white);
+	padding: 30px;
+}
+
+main article:nth-child(even) {
+	background: var(--lightgray);
+}
+
+main article h2 {
+	font-size: 2.5rem;
+}
+
+main article p {
+	padding: 5px;
+	margin: 5px 0 5px 0;
+}
+
+main article p:first-of-type span {
+	font-size: 1rem;
+	border: 1px solid var(--gray);
+	display: inline-block;
+	padding: 5px;
+}
+
+
+
+/* aside */
+aside {
+	flex: 0 0 30%;
+	padding: 30px;
+	background: var(--yellow);
+}
+
+aside section {
+	margin-bottom: 40px;
+}
+
+aside h2 {
+	font-size: 1.6rem;
+	margin: 5px 0;
+}
+
+aside form input {
+	font-size: 1rem;
+	padding: 10px;
+}
+
+aside ul {
+	list-style: none;
+}
+
+aside ul li {
+	border-bottom: 1px solid var(--orange);
+}
+
+aside ul li a {
+	text-decoration: none;
+	color: var(--gray);
+}
+
+/* footer */
+footer {
+	text-align: center;
+	background: var(--orange);
+	color: var(--white);
+	padding: 40px 0;
+}
+
+/* responsive */
+@media(max-width: 767px) {
+	.container{
+		flex-direction: column;
+		width: 90%;
+		margin: -100px auto 40px;
+	}
+	header h1{
+		font-size: 4rem;
+	}
+
+	main article h2 {
+		font-size: 2rem;
+	}
+
+}
